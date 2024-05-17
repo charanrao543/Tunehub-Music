@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f2f2f2;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				min-height: 100vh;
+			}
+			form {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				width: 300px;
+				padding: 20px;
+				background: #fff;
+				border-radius: 5px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
+			label {
+				display: block;
+				margin-bottom: 5px;
+			}
+			input[type="text"], input[type="email"], input[type="password"], textarea {
+				width: 100%;
+				padding: 5px;
+				border-radius: 3px;
+				border: 1px solid #ccc;
+				margin-bottom: 10px;
+			}
+			input[type="submit"] {
+				background-color: #4CAF50;
+				color: white;
+				border: none;
+				padding: 10px 20px;
+				text-align: center;
+				text-decoration: none;
+				margin: 10px;
+				border-radius: 3px;
+				cursor: pointer;
+				font-size: 16px;
+			}
+			input[type="submit"]:hover {
+				background-color: #45a049;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="/register" method="post">
+			<label>User Name:</label>
+			<input type ="text" name="username"/>
+			<br><br>
+			<label>Email Id:</label>
+			<input type ="email" name="email"/>
+			<br><br>
+			<label>password</label>
+			<input type ="password" name="password"/>
+			<br><br>
+			<label>Gender</label>
+			<label><input type ="radio" name="gender" value="male"> M</label>
+			<label><input type ="radio" name="gender" value="female"> F</label>
+			<label><input type ="radio" name="gender" value="other"> O</label>
+			<br><br>
+			<label>Role</label>
+			<label><input type ="radio" name="role" value="admin"> Admin</label>
+			<label><input type ="radio" name="role" value="customer"> Customer</label>
+			<br><br>
+			<label>Address</label>
+			<textarea name="address"></textarea>
+			<br><br>
+			<input type="submit" value="REGISTER"/>
+		</form>
+	</body>
+</html>
